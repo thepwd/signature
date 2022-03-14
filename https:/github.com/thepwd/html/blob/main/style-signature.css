@@ -1,0 +1,120 @@
+<style>
+
+      <!--[if !mso]><!-->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet" type="text/css"> 
+      <!--<![endif]-->
+
+      /* Remove espaços ao redor do email adicionado por alguns clientes de email. */
+      /* Cuidado: Pode remover o preenchimento/margem e adicionar uma cor de fundo para a janela de resposta.*/
+      html,
+      body {
+          margin: 0 auto !important;
+          padding: 0 !important;
+          height: 100% !important;
+          width: 100% !important;
+          background-color: #ffffff;
+      }
+
+      /* Impede que os clientes de e-mail redimensionem textos pequenos */
+      * {
+          -ms-text-size-adjust: 100%;
+          -webkit-text-size-adjust: 100%;
+      }
+
+      /* Centraliza o e-mail no Android 4.4 */
+      div[style*="margin: 0px 0"] {
+          margin:0 !important;
+      }
+
+      /* Impede que o Outlook adicione espaçamento extra às tabelas */
+      table,
+      td {
+          mso-table-lspace: 0pt !important;
+          mso-table-rspace: 0pt !important;
+      }
+
+      /* Correção o problema de preenchimento do webkit. Correção do bug de alinhamento da tabela de correio do Yahoo. Aplica o layout da tabela às 2 primeiras tabelas e remove para qualquer coisa aninhada mais profundamente */
+      table {
+          border-spacing: 0 !important;
+          border-collapse: collapse !important;
+          table-layout: fixed !important;
+          margin: 0 auto !important;
+      }
+      table table table {
+          table-layout: auto;
+      }
+
+      /* Usa um método de renderização melhor que o redimensionamento de imagens no IE */
+      img {
+          -ms-interpolation-mode:bicubic;
+      }
+
+      /* Uma solução alternativa para clientes de e-mail de links acionados. */
+      *[x-apple-data-detectors],	/* iOS */
+      .x-gmail-data-detectors, 	/* Gmail */
+      .x-gmail-data-detectors *,
+      .aBn {
+          border-bottom: 0 !important;
+          cursor: default !important;
+          color: inherit !important;
+          text-decoration: none !important;
+          font-size: inherit !important;
+          font-family: inherit !important;
+          font-weight: inherit !important;
+          line-height: inherit !important;
+      }
+
+      /* Impede que o Gmail exiba um botão de download em imagens grandes não vinculadas */
+      .a6S {
+          display: none !important;
+          opacity: 0.01 !important;
+      }
+      /* Se a linha acima não funcionar, adicione uma classe .g-img a qualquer imagem em questão */
+      img.g-img + div {
+          display:none !important;
+         }
+
+      /* Remove o espaçamento direito no aplicativo Gmail para iOS: https://github.com/TedGoas/Cerberus/issues/89 */
+      /* Consulta de mídia para cada tamanho de visualização adicional */
+      @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+          .email-container {
+              min-width: 375px !important;
+          }
+      }
+
+  <!-- Melhorias Progressivas -->
+  <style>
+      /* Media Queries */
+      @media screen and (max-width: 600px) {
+          /* Força os elementos a serem redimensionados para a largura total de seu contêiner */
+          .fluid {
+              width: 100% !important;
+              max-width: 100% !important;
+              height: auto !important;
+              margin-left: auto !important;
+              margin-right: auto !important;
+          }
+          /* Força as células da tabela em linhas de largura total */
+          .stack-column,
+          .stack-column-center {
+              display: block !important;
+              width: 100% !important;
+              max-width: 100% !important;
+              direction: ltr !important;
+          }
+          /* Justificação central */
+          .stack-column-center {
+              text-align: center !important;
+          }
+        /* Ajuste de tipografia em telas pequenas para melhorar a legibilidade */
+        .email-container p {
+          font-size: 13px !important;
+          line-height: 24px !important;
+        }
+      }
+    @media screen and (max-width: 400px) {
+      .hide{display:none!important;}
+      .block{display:block!important;}
+    }     
+
+  </style>
